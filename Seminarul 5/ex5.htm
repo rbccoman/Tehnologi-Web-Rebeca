@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agenda telefonica</title>
+    
+    <script type="text/javascript">
+        function adauga() {
+            const tbody = document.getElementById('tableBody');
+            const rand = document.createElement('tr');
+
+            function adaugaCelula(selector) {
+                const celula = document.createElement('td');
+                celula.innerText = document.querySelector(selector).value;
+                rand.append(celula);
+            }
+
+            adaugaCelula('#nume');
+            adaugaCelula('#telefon');
+
+
+            tbody.append(rand);
+
+           
+        }
+        function aplicatie() {
+            const btnAdauga = document.getElementById('btnAdauga');
+            btnAdauga.addEventListener('click', adauga)
+                }
+        document.addEventListener('DOMContentLoaded', aplicatie);
+
+    </script>
+
+</head>
+<body>
+    <h1>Agenda telefonica</h1>
+    <table>
+        <caption>
+            Lista persoane
+        </caption>
+        <thead>
+            <tr>
+                <th>Nume</th>
+           
+                <th>Telefon</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <tr>
+                <td>Popescu</td>
+               
+                <td>023423222</td>
+            </tr>
+            <tr>
+                <td>Vasilescu</td>
+               
+                <td>073423222</td>
+            </tr>
+            <tr>
+                <td>Vasilescu</td>
+           
+                <td>073423222</td>
+            </tr>
+            <tr>
+                <td>Vasilescu</td>
+               
+                <td>073423222</td>
+            </tr>
+        </tbody>
+      
+    </table>
+    <form action="#">
+        <label for="nume">Nume:</label>
+        <input name="nume" id="nume" value="Enescu">
+         <label for="Telefon">Telefon:</label>
+        <input name="telefon" id="telefon" value="0770054353">
+        <input type="button" id="btnAdauga" value="Adaugă">
+    </form>
+</body>
+</html>

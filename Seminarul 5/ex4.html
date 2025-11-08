@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Model test</title>
+    <script type="text/javascript">
+
+        function adauga(obiect) {
+            const tbody = document.getElementById('corpTabel');
+            const rand = document.createElement('tr');
+
+            const celula1 = document.createElement('td');
+            const celula2 = document.createElement('td');
+
+            celula1.textContent = obiect.materia;
+            celula2.textContent = obiect.nota;
+
+            if (obiect.nota < 5) rand.style.color = 'red';
+
+            rand.append(celula1,celula2);
+            tbody.append(rand);
+           
+
+        }
+
+        function aplicatie() {
+            document.getElementById('btnAdauga').addEventListener('click', function () {
+                const obiect = {
+                    materia : document.querySelector('input[name="materii"]:checked')?.value || '-',
+                    nota : document.getElementById('nota').value
+                };
+                adauga(obiect);
+                
+            });
+
+           
+
+            document.querySelector('#corpTabel').addEventListener('click', function (e) {
+                let rand = e.target.closest('tr');
+                rand.remove();
+
+            });
+            adauga({ materia: "Java", nota: 5 });
+        }
+     
+        document.addEventListener('DOMContentLoaded', aplicatie);
+       
+
+    </script>
+</head>
+<body>
+<form>
+    <input type="radio" name="materii" value="Multimedia"/>Multimedia
+    <input type="radio" name="materii" value="Java" />Java
+    <input type="radio" name="materii" value="POO" />Poo
+    <label>
+        <input id="nota" />Nota
+    </label>
+    <input type="button" id="btnAdauga" value="Adauga"/>
+</form>
+    <table>
+        <thead>
+            <tr>
+                <th>Disciplina</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody id="corpTabel">
+
+        </tbody>
+    </table>
+</body>
+</html>

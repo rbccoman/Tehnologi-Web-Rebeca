@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lista + Căutare după ID</title>
+</head>
+<body>
+  <h2>Adaugă în listă</h2>
+  <div>
+    <form onsubmit="return false;">
+      <input id="inputName" type="text" placeholder="Name" />
+      <br /><br />
+      <input id="inputAge" type="number" placeholder="Age" />
+      <br /><br />
+      <input value="submit" onclick="sendData()" type="button" />
+      <br /><br />
+    </form>
+  </div>
+
+  <hr />
+
+  <h2>Caută resursă după ID</h2>
+  <div>
+    <form onsubmit="return false;">
+      <input id="inputId" type="number" placeholder="Introduceți ID-ul" />
+      <input value="Cauta" onclick="getById()" type="button" />
+    </form>
+  </div>
+
+  <br />
+  <div id="resultById"></div>
+
+  <hr />
+
+  <h2>Lista curentă</h2>
+  <div id="tableData"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="ex6.js"></script>
+</body>
+</html>
