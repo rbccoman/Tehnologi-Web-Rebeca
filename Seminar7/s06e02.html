@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflow Flex</title>
+    <style>
+       * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 45px;
+    padding: 32px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.block {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 8px;
+    width: 300px;
+    margin: 16px;
+} 
+    </style>
+</head>
+</head>
+
+<body>
+    <div class="container">
+        <div class="block">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+        </div>
+        <div class="block">
+            <div class="box">D</div>
+            <div class="box">E</div>
+            <div class="box">F</div>
+        </div>
+        <div class="block">
+            <div class="box">G</div>
+            <div class="box">H</div>
+            <div class="box">I</div>
+        </div>
+    </div>
+</body>
+
+</html>

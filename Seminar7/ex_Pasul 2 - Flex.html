@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Column Flex Layout</title>
+
+    <style>
+        .container {
+            display: flex; 
+        }
+
+        .column {
+            flex: 1; 
+            display: flex;
+            flex-direction: column; 
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .item {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #eee; 
+        }
+
+        .item:hover {
+            background-color: #ccc; 
+        }
+    </style>
+</head>
+
+<body>
+<h1>3 Column Flex Layout</h1>
+    <div class="container">
+        <div class="column">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+        </div>
+
+        <div class="column">
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+        </div>
+
+        <div class="column">
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+    </div>
+
+</body>
+</html>

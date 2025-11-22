@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflow Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            padding: 32px;
+            font-size: 20px;
+        }
+
+        .form-container {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 16px;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            width: 300px; 
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            padding: 8px;
+            border: 2px solid #888;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Form</h2>
+
+    <form class="form-container">
+        <div class="form-field">
+            <label for="name">Name</label>
+            <input id="name" type="text">
+        </div>
+
+        <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" type="email">
+        </div>
+
+        <div class="form-field">
+            <label for="age">Age</label>
+            <input id="age" type="number">
+        </div>
+
+    </form>
+
+</body>
+</html>
